@@ -1,4 +1,6 @@
-const timeStamp = () => new Date().getTime();
+const moment = require('moment');
+
+const timeStamp = () => moment().valueOf();
 
 const generateMessage = (from, text) => {
   return {from, text, createdAt: timeStamp()};
